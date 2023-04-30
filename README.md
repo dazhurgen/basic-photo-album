@@ -1,6 +1,40 @@
-# youalbum
 
-This template should help get you started developing with Vue 3 in Vite.
+# Basic video Album
+
+A simple video album with vite, vue.js 3 (with composition API), and Google Cloud
+
+
+
+## Demo
+
+You can check the working example at https://dazhurgen.github.io/basic-photo-album/
+
+
+## Authors
+
+- [@dazhurgen](https://www.github.com/dazhurgen)
+
+
+## Screenshots
+
+![App Screenshot](https://i.postimg.cc/BQDWrWs8/Screenshot-2023-04-30-180118.png)
+![App Screenshot](https://i.postimg.cc/YCHckXqd/Screenshot-2023-04-30-180156.png)
+![App Screenshot](https://i.postimg.cc/fRjGbxVD/Screenshot-2023-04-30-180216.png)
+![App Screenshot](https://i.postimg.cc/6QWD4yZR/Screenshot-2023-04-30-180228.png)
+![App Screenshot](https://i.postimg.cc/sX88LmN9/Screenshot-2023-04-30-180303.png)
+
+
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
 
 ## Recommended IDE Setup
 
@@ -28,30 +62,9 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
+
