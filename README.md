@@ -29,11 +29,11 @@ You can check the working example at https://dazhurgen.github.io/basic-photo-alb
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to your .env file, the firstone is the youtube v3 apit key, and the second is the youtube videos api url
 
-`API_KEY`
+`VITE_YT_API_KEY`
 
-`ANOTHER_API_KEY`
+`VITE_YT_API_URL`
 
 
 ## Recommended IDE Setup
