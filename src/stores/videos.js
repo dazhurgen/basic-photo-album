@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 import axios from "axios";
 import { collection, onSnapshot, doc, setDoc, deleteDoc } from "firebase/firestore";
 import { db } from '../firebase'
-const apiUrl = import.meta.env.VITE_YT_API_URL
 
 export const useVideosStore = defineStore({
   id:'videos',
@@ -13,7 +12,6 @@ export const useVideosStore = defineStore({
   }),
   actions:{
     async getVideoDataFromUrl ( videoLink ) {
-      alert(apiUrl)
        let videoId = (new URL( videoLink )).searchParams.get('v');;
       let data = await axios.get(import.meta.env.VITE_YT_API_URL+videoId+'&key='+import.meta.env.VITE_YT_API_KEY+'&part=snippet')
       return {
