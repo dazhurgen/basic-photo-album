@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-toolbar color="#304FFE" dark>
-      <v-toolbar-title dark style="color:white; font-weight:600;">Photo Album</v-toolbar-title>
+      <v-toolbar-title dark style="color:white; font-weight:600;">Video Album</v-toolbar-title>
     </v-toolbar>
     <v-row justify="center" class="pt-12">
       <v-col cols="12" sm="10" md="8" lg="10">
@@ -9,7 +9,7 @@
           <v-row>
             <v-col>
               <v-text-field
-              label="Escriba o pegue el link del video"
+              label="Pegue el link del video"
                 outlined
                 dense
                 v-model="videoLinkInput"
@@ -45,15 +45,24 @@
               md="4"
               lg="3"
             >
-            <v-card @click="getVideoDetails( video )">
+             <v-card @click="getVideoDetails( video )">
               <v-img
-              
-                :src="video.thumbnails.standard.url"
+                :src="video.thumbnails.medium.url"
+                :lazy-src="video.thumbnails.default.url"
+                height="250"
                 class="align-end"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                 
                 cover
               >
+              <template v-slot:placeholder>
+                <div class="d-flex align-center justify-center fill-height">
+                  <v-progress-circular
+                    color="grey-lighten-4"
+                    indeterminate
+                  ></v-progress-circular>
+                </div>
+              </template>
                 <v-card-title class="text-white" >{{video.title}}</v-card-title>
               </v-img>
             </v-card>
